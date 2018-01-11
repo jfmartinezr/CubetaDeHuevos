@@ -13,6 +13,7 @@ import java.util.Scanner;
  * @author jumarrod
  */
 public class Tienda {
+    Cubeta cub1;
 
     /**
      * @param args the command line arguments
@@ -101,9 +102,11 @@ Huevo huevo10 = new Huevo("trucha",1,"rosado",20.0,"pequeno");
 		switch(opcion){
                case 1:
                    System.out.println("1. COMPRAR CUBETA");
-                   Cubeta cub;
-                   cub = new Cubeta("Carton","amarilla",3000.00,null);
-                   System.out.println(cub.toString());
+                   
+                   
+                   cub1 = new Cubeta("Carton","amarilla",3000.00,null);
+                   System.out.println(cub1.toString());
+                 
                   // tienda.menuCubeta();
                    break;
                case 2:
@@ -149,7 +152,8 @@ Huevo huevo10 = new Huevo("trucha",1,"rosado",20.0,"pequeno");
 		switch(opcion){
                case 1:
                    System.out.println("1. AÑADIR HUEVO");
-                  // tienda.menuCubeta();
+                   cub1.AgregarHuevo("Pato",1,"blanco",200.0,"Mediano");
+                   // tienda.menuCubeta();
                    break;
                case 2:
                    System.out.println("2. BUSCAR HUEVO");

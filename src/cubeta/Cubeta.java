@@ -15,28 +15,20 @@ public class Cubeta {
     private String material;
     private String color;
     private Double precio;
-    private ArrayList<Huevo> listahuevos = null;
-    
+    private ArrayList<Huevo> listahuevos;
+    Huevo huevo;
      
      
     //constructor
-     
-     
+
     public Cubeta(String material, String color, Double precio, ArrayList<Huevo> listahuevos) {
         this.material = material;
         this.color = color;
         this.precio = precio;
+        this.listahuevos = listahuevos;
     }
-
-    //defino la cubeta llamada lista huevos
-
- 
- //al retornar el objeto cubeta necesito que se vean la lista de huevos ?
-  
- 
- //que devuelve la clase
-
-   
+     
+    
     
     public String getMaterial() {
         listahuevos = new ArrayList<> ();
@@ -78,5 +70,8 @@ public class Cubeta {
     }
 
   
-    
+    public void AgregarHuevo(String tipo, Integer cantidad_yemas, String color, Double precio, String tamano){
+    huevo = new Huevo(tipo, cantidad_yemas, color, precio, tamano);
+    }
+    //
 }
