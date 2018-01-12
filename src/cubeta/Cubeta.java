@@ -5,7 +5,9 @@
  */
 package cubeta;
 
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -15,20 +17,22 @@ public class Cubeta {
     private String material;
     private String color;
     private Double precio;
-    private ArrayList<Huevo> listahuevos;
+    private List<Huevo> listahuevos = new ArrayList<>();
     Huevo huevo;
      
      
     //constructor
 
-    public Cubeta(String material, String color, Double precio, ArrayList<Huevo> listahuevos) {
+    public Cubeta(String material, String color, Double precio, List<Huevo> listahuevos) {
         this.material = material;
         this.color = color;
         this.precio = precio;
         this.listahuevos = listahuevos;
     }
-     
-    
+
+    public Cubeta() {
+       
+    }
     
     public String getMaterial() {
         listahuevos = new ArrayList<> ();
@@ -55,11 +59,11 @@ public class Cubeta {
         this.precio = precio;
     }
 
-    public ArrayList<Huevo> getListahuevos() {
+    public List<Huevo> getListahuevos() {
         return listahuevos;
     }
 
-    public void setListahuevos(ArrayList<Huevo> listahuevos) {
+    public void setListahuevos(List<Huevo> listahuevos) {
         this.listahuevos = listahuevos;
     }
  
@@ -69,9 +73,16 @@ public class Cubeta {
         return "Cubeta{" + "material=" + material + ", color=" + color + ", precio=" + precio + ", listahuevos=" + listahuevos + '}';
     }
 
-  
-    public void AgregarHuevo(String tipo, Integer cantidad_yemas, String color, Double precio, String tamano){
-    huevo = new Huevo(tipo, cantidad_yemas, color, precio, tamano);
+      //no quitar
+//    public void AgregarHuevo(String tipo, Integer cantidad_yemas, String color, Double precio, String tamano){
+//    huevo = new Huevo(tipo, cantidad_yemas, color, precio, tamano);
+//    listahuevos.add(huevo);
+//    }
+    
+    public void AgregarHuevo2(Huevo huevo){
+      listahuevos.add(huevo);
     }
+
+    
     //
 }

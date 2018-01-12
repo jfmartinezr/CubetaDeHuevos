@@ -13,7 +13,10 @@ import java.util.Scanner;
  * @author jumarrod
  */
 public class Tienda {
-    Cubeta cub1;
+    //instanciando la clase en el nivel superior la puedo utilizar en cualquier parte del codigo
+    //las clases debe tener constructor por defecto.
+    Cubeta cub1  = new Cubeta();
+    Huevo huevo1 = new Huevo();
 
     /**
      * @param args the command line arguments
@@ -106,7 +109,7 @@ Huevo huevo10 = new Huevo("trucha",1,"rosado",20.0,"pequeno");
                    
                    cub1 = new Cubeta("Carton","amarilla",3000.00,null);
                    System.out.println(cub1.toString());
-                 
+                   
                   // tienda.menuCubeta();
                    break;
                case 2:
@@ -152,7 +155,18 @@ Huevo huevo10 = new Huevo("trucha",1,"rosado",20.0,"pequeno");
 		switch(opcion){
                case 1:
                    System.out.println("1. AÑADIR HUEVO");
-                   cub1.AgregarHuevo("Pato",1,"blanco",200.0,"Mediano");
+                //   cub1.AgregarHuevo("Pato",1,"blanco",200.0,"Mediano"); //no quitar
+                   
+                   
+                   //cub1.AgregarHuevo(tipo, opcion, color, Double.NaN, tamano);
+                   //en lugar de utilizar el constructor por defecto utilizo los setters y getters
+                   huevo1.setTipo("gallina");
+                   huevo1.setPrecio(200.23);
+                   huevo1.setColor("amarillo");
+                   huevo1.setCantidad_yemas(2);
+                   
+                   cub1.AgregarHuevo2(huevo1);
+                   System.out.println(cub1.toString());
                    // tienda.menuCubeta();
                    break;
                case 2:
@@ -180,14 +194,7 @@ Huevo huevo10 = new Huevo("trucha",1,"rosado",20.0,"pequeno");
                 default:
                    System.out.println("!!!!!!!!!!!!!Solo números entre 1 y 8");
            }
-                
-                
-              
-        
         }
-        
-        
-        
     }
     
     

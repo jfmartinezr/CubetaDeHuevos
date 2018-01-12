@@ -13,16 +13,17 @@ import java.util.ArrayList;
  */
 public class Huevo {
     private String tipo;
-    private Integer cantidad_yemas;
+    private Integer cantidadYemas;
     private String color;
     private Double precio;
     private String tamano;
       
-
+    public Huevo(){
+    }
     
     public Huevo(String tipo, Integer cantidad_yemas, String color, Double precio, String tamano) {
         this.tipo = tipo;
-        this.cantidad_yemas = cantidad_yemas;
+        this.cantidadYemas = cantidadYemas;
         this.color = color;
         this.precio = precio;
         this.tamano = tamano;
@@ -36,12 +37,12 @@ public class Huevo {
         this.tipo = tipo;
     }
 
-    public Integer getCantidad_yemas() {
-        return cantidad_yemas;
+    public Integer getCantidadYemas() {
+        return cantidadYemas;
     }
 
-    public void setCantidad_yemas(Integer cantidad_yemas) {
-        this.cantidad_yemas = cantidad_yemas;
+    public void setCantidad_yemas(Integer cantidadyemas) {
+        this.cantidadYemas = cantidadYemas;
     }
 
     public String getColor() {
