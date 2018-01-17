@@ -83,6 +83,22 @@ public class Cubeta {
       listahuevos.add(huevo);
     }
 
+    public void EliminarHuevo2(Huevo huevo){
+      listahuevos.remove(huevo);
+    }
+    
+    public int BuscarHuevo2(Huevo huevo){
+    int i;
+        for (i=0; i<= listahuevos.size(); i++){
+          i=listahuevos.indexOf(huevo);
+    }
+     return i;
+    }
+    
+    public void vaciarCubeta(){
+      listahuevos.clear();
+    }
+    
     
     //
 }

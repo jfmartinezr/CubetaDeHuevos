@@ -6,6 +6,7 @@
 package cubeta;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -17,6 +18,7 @@ public class Tienda {
     //las clases debe tener constructor por defecto.
     Cubeta cub1  = new Cubeta();
     Huevo huevo1 = new Huevo();
+    List<Huevo> listahuevos = new ArrayList<>();
 
     /**
      * @param args the command line arguments
@@ -91,6 +93,8 @@ Huevo huevo10 = new Huevo("trucha",1,"rosado",20.0,"pequeno");
     public void menuCubeta(){
         Scanner sc = new Scanner(System.in);
         Boolean salir = false;
+       // ArrayList<String> listahuevos = new ArrayList<String>();
+        
         int opcion;
         
         while(!salir){
@@ -105,11 +109,9 @@ Huevo huevo10 = new Huevo("trucha",1,"rosado",20.0,"pequeno");
 		switch(opcion){
                case 1:
                    System.out.println("1. COMPRAR CUBETA");
-                   
-                   
-                   cub1 = new Cubeta("Carton","amarilla",3000.00,null);
+                   cub1 = new Cubeta("Carton","amarilla",3000.00,listahuevos);
                    System.out.println(cub1.toString());
-                   
+                  
                   // tienda.menuCubeta();
                    break;
                case 2:
@@ -171,6 +173,7 @@ Huevo huevo10 = new Huevo("trucha",1,"rosado",20.0,"pequeno");
                    break;
                case 2:
                    System.out.println("2. BUSCAR HUEVO");
+                   System.out.println(cub1.BuscarHuevo2(huevo1));
                    break;
                 case 3:
                    System.out.println("3.  ELIMINAR HUEVO");
