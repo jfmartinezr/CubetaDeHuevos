@@ -22,20 +22,17 @@ public class Cubeta {
      
      
     //constructor
-
+    public Cubeta() {
+    }
+    
     public Cubeta(String material, String color, Double precio, List<Huevo> listahuevos) {
         this.material = material;
         this.color = color;
         this.precio = precio;
         this.listahuevos = listahuevos;
     }
-
-    public Cubeta() {
-       
-    }
     
     public String getMaterial() {
-        listahuevos = new ArrayList<> ();
         return material;
     }
 
@@ -78,6 +75,11 @@ public class Cubeta {
 //    huevo = new Huevo(tipo, cantidad_yemas, color, precio, tamano);
 //    listahuevos.add(huevo);
 //    }
+    
+    
+    public void comprarCubeta(Cubeta cubeta){
+    cubeta.toString();
+    }
     
     public void AgregarHuevo2(Huevo huevo){
       listahuevos.add(huevo);

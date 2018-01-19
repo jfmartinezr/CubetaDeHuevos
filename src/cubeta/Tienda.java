@@ -18,7 +18,7 @@ public class Tienda {
     //las clases debe tener constructor por defecto.
     Cubeta cub1  = new Cubeta();
     Huevo huevo1 = new Huevo();
-    List<Huevo> listahuevos = new ArrayList<>();
+    List<Huevo> listahuevos; // = new ArrayList<>();
 
     /**
      * @param args the command line arguments
@@ -109,7 +109,13 @@ Huevo huevo10 = new Huevo("trucha",1,"rosado",20.0,"pequeno");
 		switch(opcion){
                case 1:
                    System.out.println("1. COMPRAR CUBETA");
-                   cub1 = new Cubeta("Carton","amarilla",3000.00,listahuevos);
+                   //cub1 = new Cubeta("Carton","amarilla",3000.00,listahuevos);
+                   
+                   cub1.setColor("amarilla");
+                   cub1.setMaterial("carton");
+                   cub1.setPrecio(3000.0);
+                   cub1.setListahuevos(listahuevos);
+                   //cub1.comprarCubeta(cub1);
                    System.out.println(cub1.toString());
                   
                   // tienda.menuCubeta();
