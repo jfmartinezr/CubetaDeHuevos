@@ -21,7 +21,7 @@ public class Huevo {
     public Huevo(){
     }
     
-    public Huevo(String tipo, Integer cantidad_yemas, String color, Double precio, String tamano) {
+    public Huevo(String tipo, Integer cantidadYemas, String color, Double precio, String tamano) {
         this.tipo = tipo;
         this.cantidadYemas = cantidadYemas;
         this.color = color;
@@ -41,7 +41,7 @@ public class Huevo {
         return cantidadYemas;
     }
 
-    public void setCantidad_yemas(Integer cantidadyemas) {
+    public void setCantidadYemas(Integer cantidadYemas) {
         this.cantidadYemas = cantidadYemas;
     }
 
@@ -69,4 +69,11 @@ public class Huevo {
         this.tamano = tamano;
     }
 
+    @Override
+    public String toString() {
+        return "Huevo{" + "tipo=" + tipo + ", cantidadYemas=" + cantidadYemas + ", color=" + color + ", precio=" + precio + ", tamano=" + tamano + '}';
+    }
+
+    
+    
 }

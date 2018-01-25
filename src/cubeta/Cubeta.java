@@ -77,9 +77,9 @@ public class Cubeta {
 //    }
     
     
-    public void comprarCubeta(Cubeta cubeta){
-    cubeta.toString();
-    }
+//    public void comprarCubeta(Cubeta cubeta){
+//    cubeta.toString();
+//    }
     
     public void AgregarHuevo2(Huevo huevo){
       listahuevos.add(huevo);
@@ -96,6 +96,30 @@ public class Cubeta {
     }
      return i;
     }
+    
+//    public void BuscarHuevito(Huevo huevo){
+//    Iterator<Huevo> it = listahuevos.iterator();
+//    while (it.hasNext()){
+//    System.out.println(it.next()+ huevo.getTipo());
+//
+//    }
+//
+//    }
+    
+        public Huevo BuscarHuevito(String tipoHuevo) {
+        Huevo resultado = null;
+        for (Huevo huevo : listahuevos) {
+            if (huevo.getTipo().equals(tipoHuevo)) {
+                resultado = huevo;
+                break;
+            }
+        }
+        return resultado;
+    }
+
+    
+    
+    
     
     public void vaciarCubeta(){
       listahuevos.clear();
